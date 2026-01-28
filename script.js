@@ -3,20 +3,22 @@ const loading = document.getElementById("loadingScreen");
 const volume = document.getElementById("volume");
 const toggle = document.getElementById("musicToggle");
 
-// SET MUSIC PER PAGE
-audio.src = document.body.dataset.music;
+// SET SINGLE MUSIC FILE
+audio.src = "intracon_city2.mp3";
 
 // LOAD SAVED SETTINGS
-audio.volume = localStorage.getItem("volume") || 0.5;
+const savedVolume = localStorage.getItem("volume");
+audio.volume = savedVolume !== null ? savedVolume : 0.5;
 volume.value = audio.volume;
 
-let musicEnabled = localStorage.getItem("music") !== "off";
+const musicSetting = localStorage.getItem("music"); // "on" or "off"
+let musicEnabled = musicSetting !== "off";
 
-// START MUSIC ON FIRST TAP
-function startMusic(){
+// START MUSIC ON FIRST USER INTERACTION
+function startMusic() {
   loading.style.display = "none";
 
-  if(musicEnabled){
+  if (musicEnabled) {
     audio.play();
   }
 
@@ -27,21 +29,21 @@ function startMusic(){
 document.addEventListener("click", startMusic);
 document.addEventListener("touchstart", startMusic);
 
-// VOLUME
-volume.addEventListener("input", ()=>{
+// VOLUME CONTROL
+volume.addEventListener("input", () => {
   audio.volume = volume.value;
   localStorage.setItem("volume", volume.value);
 });
 
-// TOGGLE MUSIC
-toggle.addEventListener("click", ()=>{
-  if(audio.paused){
+// TOGGLE MUSIC ON / OFF
+toggle.addEventListener("click", () => {
+  if (audio.paused) {
     audio.play();
-    localStorage.setItem("music","on");
-    toggle.textContent="🔊";
-  }else{
+    localStorage.setItem("music", "on");
+    toggle.textContent = "🔊";
+  } else {
     audio.pause();
-    localStorage.setItem("music","off");
-    toggle.textContent="🔇";
+    localStorage.setItem("music", "off");
+    toggle.textContent = "🔇";
   }
 });
