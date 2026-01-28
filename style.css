@@ -70,9 +70,23 @@ h2{font-size:2rem;margin-bottom:30px;color:#22d3ee;text-align:center}
   border-color:#22d3ee;color:#22d3ee;transform:translateY(-4px)
 }
 
-.gallery{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px
-}
+<section class="container py-5">
+  <h2 class="text-center text-info mb-4">Gallery</h2>
+
+  <div class="row g-4">
+    <div class="col-12 col-md-4">
+      <img src="gallery1.jpg" class="img-fluid rounded shadow" alt="GTA Cinematic">
+    </div>
+
+    <div class="col-12 col-md-4">
+      <img src="gallery2.jpg" class="img-fluid rounded shadow" alt="YouTube Banner">
+    </div>
+
+    <div class="col-12 col-md-4">
+      <img src="gallery3.jpg" class="img-fluid rounded shadow" alt="GTA Profile">
+    </div>
+  </div>
+</section>
 .thumb{
   background:#020617;border-radius:18px;overflow:hidden;
   border:1px solid #1f2933;transition:.3s
