@@ -1,49 +1,43 @@
 const audio = document.getElementById("bgMusic");
-const loading = document.getElementById("loadingScreen");
 const volume = document.getElementById("volume");
 const toggle = document.getElementById("musicToggle");
 
-// SET SINGLE MUSIC FILE
+// AUDIO FILE
 audio.src = "intracon_city2.mp3";
+audio.loop = true;
 
-// LOAD SAVED SETTINGS
-const savedVolume = localStorage.getItem("volume");
-audio.volume = savedVolume !== null ? savedVolume : 0.5;
+// DEFAULT VOLUME
+audio.volume = localStorage.getItem("volume") || 0.7;
 volume.value = audio.volume;
 
-const musicSetting = localStorage.getItem("music"); // "on" or "off"
-let musicEnabled = musicSetting !== "off";
-
-// START MUSIC ON FIRST USER INTERACTION
-function startMusic() {
-  loading.style.display = "none";
-
-  if (musicEnabled) {
-    audio.play();
-  }
-
-  document.removeEventListener("click", startMusic);
-  document.removeEventListener("touchstart", startMusic);
+// RESTORE STATE
+if (localStorage.getItem("music") === "off") {
+  toggle.textContent = "🔇";
+} else {
+  toggle.textContent = "🔊";
 }
 
-document.addEventListener("click", startMusic);
-document.addEventListener("touchstart", startMusic);
-
-// VOLUME CONTROL
-volume.addEventListener("input", () => {
-  audio.volume = volume.value;
-  localStorage.setItem("volume", volume.value);
-});
-
-// TOGGLE MUSIC ON / OFF
+// 🔥 ONLY SAFE PLAY METHOD (BUTTON)
 toggle.addEventListener("click", () => {
   if (audio.paused) {
-    audio.play();
-    localStorage.setItem("music", "on");
-    toggle.textContent = "🔊";
+    audio.play()
+      .then(() => {
+        localStorage.setItem("music", "on");
+        toggle.textContent = "🔊";
+      })
+      .catch(err => {
+        alert("Tap the Music button to allow sound");
+        console.log(err);
+      });
   } else {
     audio.pause();
     localStorage.setItem("music", "off");
     toggle.textContent = "🔇";
   }
+});
+
+// VOLUME
+volume.addEventListener("input", () => {
+  audio.volume = volume.value;
+  localStorage.setItem("volume", volume.value);
 });
