@@ -9,8 +9,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-music="music-home.mp3">
 
+<!-- GTA LOADING SCREEN -->
+<div id="loadingScreen">
+  <h1>Loading...</h1>
+  <p>Tap anywhere to start</p>
+</div>
+
+<!-- AUDIO -->
+<audio id="bgMusic" loop></audio>
+
+<!-- MUSIC CONTROLS -->
+<div class="music-controls">
+  <button id="musicToggle">🔊</button>
+  <input type="range" id="volume" min="0" max="1" step="0.01">
+</div>
+
+<!-- HERO -->
 <header>
   <div class="hero">
     <div class="logo">EP</div>
@@ -23,14 +39,16 @@
   </div>
 </header>
 
+<!-- ABOUT -->
 <section class="about">
   <h2>About</h2>
   <p>
     Ericson Paulo YT is a GTA Roleplay creator known for cinematic gameplay,
-    intense RP scenarios, and creative in-game stories.
+    immersive RP scenarios, and creative in-game stories.
   </p>
 </section>
 
+<!-- SOCIAL -->
 <section>
   <h2>Social Links</h2>
   <div class="socials">
@@ -41,6 +59,7 @@
   </div>
 </section>
 
+<!-- GALLERY -->
 <section>
   <h2>Gallery</h2>
   <div class="gallery">
@@ -50,11 +69,16 @@
   </div>
 </section>
 
+<!-- VIDEO -->
 <section class="videos">
   <h2>Latest Video</h2>
-  <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" allowfullscreen></iframe>
+  <iframe
+    src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+    allowfullscreen>
+  </iframe>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
   <div class="contact-box">
@@ -69,5 +93,6 @@
   © 2026 Ericson Paulo YT • GTA Creator Website
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
