@@ -1,109 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Ericson Paulo YT | GTA Creator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT -->
+  <!-- BOOTSTRAP 5.3.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- GOOGLE FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
+  <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="bg-dark text-light">
 
-<!-- GTA LOADING SCREEN -->
-<div id="loadingScreen">
-  <h1>Loading...</h1>
-  <p>Tap anywhere to start</p>
-</div>
+<!-- HERO SECTION -->
+<header class="container-fluid min-vh-100 d-flex align-items-center justify-content-center text-center position-relative">
+  <div class="row">
+    <div class="col-12">
 
-<!-- AUDIO -->
-<audio id="bgMusic" loop></audio>
+      <!-- LOGO -->
+      <div class="mb-4">
+        <img src="logo.png" alt="Ericson Paulo YT Logo" class="img-fluid rounded-circle hero-logo">
+      </div>
 
-<!-- MUSIC CONTROLS -->
-<div class="music-controls">
-  <button id="musicToggle">🔊</button>
-  <input type="range" id="volume" min="0" max="1" step="0.01">
-</div>
+      <!-- TITLE -->
+      <h1 class="fw-bold display-5">
+        Ericson Paulo <span class="text-info">YT</span>
+      </h1>
 
-<!-- HERO -->
-<header>
-  <div class="hero">
+      <p class="text-secondary mb-4">
+        GTA Roleplay • Gaming Content Creator
+      </p>
 
-    <div class="logo">
-      <img src="logo.png" alt="Ericson Paulo YT Logo">
+      <!-- BUTTONS -->
+      <div class="d-flex gap-3 justify-content-center flex-wrap">
+        <a href="https://youtube.com/@ericsonpauloyt" target="_blank" class="btn btn-danger btn-lg rounded-pill px-4">
+          YouTube
+        </a>
+        <a href="#contact" class="btn btn-outline-info btn-lg rounded-pill px-4">
+          Contact
+        </a>
+      </div>
+
     </div>
-
-    <h1>Ericson Paulo <span>YT</span></h1>
-    <p>GTA Roleplay • Gaming Content Creator</p>
-
-    <div class="buttons">
-      <a href="https://youtube.com/@ericsonpauloyt" target="_blank" class="btn-primary">YouTube</a>
-      <a href="#contact" class="btn-secondary">Contact</a>
-    </div>
-
   </div>
 </header>
 
 <!-- ABOUT -->
-<section class="about">
-  <h2>About</h2>
-  <p>
+<section class="container py-5">
+  <h2 class="text-center text-info mb-4">About</h2>
+  <p class="text-center text-secondary mx-auto" style="max-width:800px">
     Ericson Paulo YT is a GTA Roleplay creator known for cinematic gameplay,
     immersive RP scenarios, and creative in-game stories.
   </p>
 </section>
 
 <!-- SOCIAL LINKS -->
-<section>
-  <h2>Social Links</h2>
-  <div class="socials">
-    <a href="https://youtube.com/@ericsonpauloyt" target="_blank">YouTube</a>
-    <a href="https://www.facebook.com/share/1DoHvuvnUc/" target="_blank">Facebook</a>
-    <a href="https://www.tiktok.com/@ericson_paulo?_r=1&_t=ZS-93S3GtXc0Ea" target="_blank">TikTok</a>
-    <a href="https://discord.com/users/956172755521384488" target="_blank">Discord</a>
+<section class="container py-5">
+  <h2 class="text-center text-info mb-4">Social Links</h2>
+  <div class="row justify-content-center g-3">
+    <div class="col-auto"><a class="btn btn-outline-light" href="https://youtube.com/@ericsonpauloyt">YouTube</a></div>
+    <div class="col-auto"><a class="btn btn-outline-light" href="https://www.facebook.com/share/1DoHvuvnUc/">Facebook</a></div>
+    <div class="col-auto"><a class="btn btn-outline-light" href="https://www.tiktok.com/@ericson_paulo">TikTok</a></div>
+    <div class="col-auto"><a class="btn btn-outline-light" href="https://discord.com/users/956172755521384488">Discord</a></div>
   </div>
 </section>
 
 <!-- GALLERY -->
-<section>
-  <h2>Gallery</h2>
-  <div class="gallery">
-    <div class="thumb"><img src="https://picsum.photos/400/300?1" alt=""></div>
-    <div class="thumb"><img src="https://picsum.photos/400/300?2" alt=""></div>
-    <div class="thumb"><img src="https://picsum.photos/400/300?3" alt=""></div>
+<section class="container py-5">
+  <h2 class="text-center text-info mb-4">Gallery</h2>
+  <div class="row g-4">
+    <div class="col-sm-6 col-lg-4">
+      <img src="https://picsum.photos/400/300?1" class="img-fluid rounded">
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <img src="https://picsum.photos/400/300?2" class="img-fluid rounded">
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <img src="https://picsum.photos/400/300?3" class="img-fluid rounded">
+    </div>
   </div>
 </section>
 
 <!-- VIDEO -->
-<section class="videos">
-  <h2>Latest Video</h2>
-  <iframe
-    src="https://www.youtube.com/embed/FGC2fIGL5bU"
-    allowfullscreen>
-  </iframe>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="contact-box">
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Email">
-    <textarea rows="5" placeholder="Message"></textarea>
-    <button>Send Message</button>
+<section class="container py-5">
+  <h2 class="text-center text-info mb-4">Latest Video</h2>
+  <div class="ratio ratio-16x9 rounded overflow-hidden">
+    <iframe src="https://www.youtube.com/embed/FGC2fIGL5bU" allowfullscreen></iframe>
   </div>
 </section>
 
-<footer>
+<!-- CONTACT -->
+<section id="contact" class="container py-5">
+  <h2 class="text-center text-info mb-4">Contact</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card bg-black text-light p-4 rounded-4">
+        <input class="form-control mb-3" placeholder="Your Name">
+        <input class="form-control mb-3" placeholder="Email">
+        <textarea class="form-control mb-3" rows="4" placeholder="Message"></textarea>
+        <button class="btn btn-info fw-bold">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-center py-4 text-secondary">
   © 2026 Ericson Paulo YT • GTA Creator Website
 </footer>
-
-<!-- JS -->
-<script src="script.js"></script>
 
 </body>
 </html>
