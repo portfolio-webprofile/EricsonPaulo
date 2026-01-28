@@ -1,0 +1,102 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Orbitron',sans-serif;
+  background:linear-gradient(135deg,#050505,#0f172a);
+  color:#e5e7eb;
+}
+
+a{text-decoration:none}
+
+header{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 20px;
+  background:url('https://images.unsplash.com/photo-1549921296-3ccea7e5c65b') center/cover no-repeat;
+  position:relative;
+}
+
+header::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.75);
+}
+
+.hero{position:relative;z-index:2;max-width:900px}
+
+.logo{
+  width:140px;height:140px;border-radius:50%;
+  background:linear-gradient(135deg,#22d3ee,#9333ea);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;font-size:26px;font-weight:800;color:#020617
+}
+
+h1{font-size:clamp(2.2rem,5vw,3.5rem);margin-bottom:10px}
+h1 span{color:#22d3ee}
+p{color:#9ca3af;margin-bottom:25px}
+
+.buttons a{
+  display:inline-block;margin:8px;padding:14px 30px;border-radius:30px;
+  font-weight:600;transition:.3s
+}
+
+.btn-primary{background:#ef4444;color:#fff}
+.btn-primary:hover{background:#dc2626}
+
+.btn-secondary{border:2px solid #22d3ee;color:#22d3ee}
+.btn-secondary:hover{background:#22d3ee;color:#020617}
+
+section{padding:80px 20px;max-width:1100px;margin:auto}
+h2{font-size:2rem;margin-bottom:30px;color:#22d3ee;text-align:center}
+
+.about p{text-align:center;max-width:800px;margin:auto}
+
+.socials{display:flex;justify-content:center;flex-wrap:wrap;gap:20px}
+.socials a{
+  padding:16px 26px;border-radius:16px;background:#020617;
+  border:1px solid #1f2933;color:#e5e7eb;transition:.3s
+}
+.socials a:hover{
+  border-color:#22d3ee;color:#22d3ee;transform:translateY(-4px)
+}
+
+.gallery{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px
+}
+.thumb{
+  background:#020617;border-radius:18px;overflow:hidden;
+  border:1px solid #1f2933;transition:.3s
+}
+.thumb img{width:100%;height:180px;object-fit:cover}
+.thumb:hover{transform:scale(1.03);border-color:#22d3ee}
+
+.videos iframe{
+  width:100%;height:500px;border-radius:20px;border:none
+}
+
+.contact-box{
+  max-width:600px;margin:auto;background:#020617;padding:40px;
+  border-radius:20px;border:1px solid #1f2933
+}
+.contact-box input,.contact-box textarea{
+  width:100%;margin-bottom:15px;padding:14px;border-radius:12px;
+  border:1px solid #1f2933;background:#020617;color:#e5e7eb
+}
+.contact-box button{
+  width:100%;padding:14px;border-radius:30px;border:none;
+  background:#22d3ee;color:#020617;font-weight:700;cursor:pointer
+}
+.contact-box button:hover{background:#38bdf8}
+
+footer{
+  text-align:center;padding:30px;background:#020617;
+  color:#6b7280;font-size:.9rem
+}
+
+@media(max-width:768px){
+  .videos iframe{height:260px}
+}
