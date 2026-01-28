@@ -146,3 +146,19 @@ footer{
 @media(max-width:768px){
   .videos iframe{height:260px}
 }
+body{
+  font-family:'Orbitron',sans-serif;
+}
+
+.hero-logo{
+  width:120px;
+  height:120px;
+  object-fit:contain;
+}
+
+@media (min-width:768px){
+  .hero-logo{
+    width:150px;
+    height:150px;
+  }
+}
