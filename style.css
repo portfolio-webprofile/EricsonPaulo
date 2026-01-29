@@ -1,190 +1,75 @@
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-  font-family:'Orbitron',sans-serif;
-  background:linear-gradient(135deg,#050505,#0f172a);
-  color:#e5e7eb;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a{text-decoration:none}
-
-header{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:40px 20px;
-  background:url('https://images.unsplash.com/photo-1549921296-3ccea7e5c65b') center/cover no-repeat;
-  position:relative;
+/* GLOBAL */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #020617;
 }
 
-header::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.75);
+/* HERO */
+header {
+  background-color: #020617;
 }
 
-.hero{position:relative;z-index:2;max-width:900px}
-
-.logo{
-  width:120px;
-  height:120px;
-  margin:0 auto 20px;
+header img {
+  max-width: 140px;
 }
 
-.logo img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  display:block;
+/* TITLES */
+h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
 }
 
-h1{font-size:clamp(2.2rem,5vw,3.5rem);margin-bottom:10px}
-h1 span{color:#22d3ee}
-p{color:#9ca3af;margin-bottom:25px}
-
-.buttons a{
-  display:inline-block;margin:8px;padding:14px 30px;border-radius:30px;
-  font-weight:600;transition:.3s
+h2 {
+  font-weight: 700;
 }
 
-.btn-primary{background:#ef4444;color:#fff}
-.btn-primary:hover{background:#dc2626}
-
-.btn-secondary{border:2px solid #22d3ee;color:#22d3ee}
-.btn-secondary:hover{background:#22d3ee;color:#020617}
-
-section{padding:80px 20px;max-width:1100px;margin:auto}
-h2{font-size:2rem;margin-bottom:30px;color:#22d3ee;text-align:center}
-
-.about p{text-align:center;max-width:800px;margin:auto}
-
-.socials{display:flex;justify-content:center;flex-wrap:wrap;gap:20px}
-.socials a{
-  padding:16px 26px;border-radius:16px;background:#020617;
-  border:1px solid #1f2933;color:#e5e7eb;transition:.3s
-}
-.socials a:hover{
-  border-color:#22d3ee;color:#22d3ee;transform:translateY(-4px)
+/* SOCIAL BUTTONS (override Bootstrap lightly) */
+.btn-outline-light {
+  border-radius: 14px;
 }
 
-<section class="container py-5">
-  <h2 class="text-center text-info mb-4">Gallery</h2>
-
-  <div class="row g-4">
-    <div class="col-12 col-md-4">
-      <img src="gallery1.jpg" class="img-fluid rounded shadow" alt="GTA Cinematic">
-    </div>
-
-    <div class="col-12 col-md-4">
-      <img src="gallery2.jpg" class="img-fluid rounded shadow" alt="YouTube Banner">
-    </div>
-
-    <div class="col-12 col-md-4">
-      <img src="gallery3.jpg" class="img-fluid rounded shadow" alt="GTA Profile">
-    </div>
-  </div>
-</section>
-.thumb{
-  background:#020617;border-radius:18px;overflow:hidden;
-  border:1px solid #1f2933;transition:.3s
-}
-.thumb img{width:100%;height:180px;object-fit:cover}
-.thumb:hover{transform:scale(1.03);border-color:#22d3ee}
-
-.videos iframe{
-  width:100%;height:500px;border-radius:20px;border:none
+/* GALLERY */
+section img {
+  transition: transform 0.3s ease;
 }
 
-.contact-box{
-  max-width:600px;margin:auto;background:#020617;padding:40px;
-  border-radius:20px;border:1px solid #1f2933
-}
-.contact-box input,.contact-box textarea{
-  width:100%;margin-bottom:15px;padding:14px;border-radius:12px;
-  border:1px solid #1f2933;background:#020617;color:#e5e7eb
-}
-.contact-box button{
-  width:100%;padding:14px;border-radius:30px;border:none;
-  background:#22d3ee;color:#020617;font-weight:700;cursor:pointer
-}
-.contact-box button:hover{background:#38bdf8}
-
-footer{
-  text-align:center;padding:30px;background:#020617;
-  color:#6b7280;font-size:.9rem
+section img:hover {
+  transform: scale(1.03);
 }
 
-
-/* MUSIC CONTROLS */
-.music-controls{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#020617;
-  padding:12px;
-  border-radius:16px;
-  border:1px solid #22d3ee;
-  display:flex;
-  gap:10px;
-  align-items:center;
-  z-index:999;
-}
-.music-controls button{
-  background:none;
-  border:none;
-  color:#22d3ee;
-  font-size:1.2rem;
-  cursor:pointer;
-}
-.music-controls input{
-  width:80px;
+/* CONTACT */
+.card {
+  background-color: #020617;
+  border: 1px solid #1f2933;
 }
 
-@media(max-width:768px){
-  .videos iframe{height:260px}
-}
-body{
-  font-family:'Orbitron',sans-serif;
-}
-
-.hero-logo{
-  width:120px;
-  height:120px;
-  object-fit:contain;
+.form-control {
+  background-color: #020617;
+  color: #e5e7eb;
+  border: 1px solid #1f2933;
 }
 
-@media (min-width:768px){
-  .hero-logo{
-    width:150px;
-    height:150px;
+.form-control:focus {
+  background-color: #020617;
+  color: #ffffff;
+  border-color: #22d3ee;
+  box-shadow: none;
+}
+
+/* FOOTER */
+footer {
+  font-size: 0.9rem;
+}
+
+/* MOBILE TWEAKS */
+@media (max-width: 576px) {
+  header img {
+    max-width: 110px;
   }
-}
-
-.hero-fix{
-  min-height: 90svh; /* mobile-safe viewport */
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-.hero-fix{
-  min-height: 85svh;
-}
-/* 🔥 FORCE FIX DARK HERO CONTENT */
-header,
-header * {
-  opacity: 1 !important;
-  filter: none !important;
-}
-
-.hero-logo {
-  opacity: 1 !important;
-  filter: none !important;
-}
-
-header h1,
-header p,
-header a {
-  color: #ffffff !important;
 }
