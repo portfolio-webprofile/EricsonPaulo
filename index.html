@@ -2,10 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ericson Paulo YT | GTA Creator</title>
+
+  <!-- SEO META -->
+  <title>Ericson Paulo YT | GTA Roleplay Gaming Creator</title>
+  <meta name="description" content="Ericson Paulo YT is a GTA Roleplay gaming content creator featuring cinematic gameplay, immersive RP stories, and live content.">
+  <meta name="keywords" content="Ericson Paulo YT, GTA Roleplay, GTA RP, Gaming Creator, YouTuber">
+  <meta name="author" content="Ericson Paulo YT">
+
+  <!-- MOBILE -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- BOOTSTRAP 5.3.3 -->
+  <!-- OPEN GRAPH (Facebook / Discord Preview) -->
+  <meta property="og:title" content="Ericson Paulo YT - GTA Roleplay Creator">
+  <meta property="og:description" content="Cinematic GTA Roleplay gameplay and immersive stories.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- BOOTSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- GOOGLE FONT -->
@@ -15,40 +28,28 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-dark text-light">
+<body>
 
-<!-- HERO SECTION (FIXED) -->
-<header class="container-fluid bg-dark py-5 text-center">
+<!-- HERO -->
+<header class="hero-header text-center py-5">
   <div class="container">
 
-    <!-- LOGO -->
-    <img
-      src="logo.png"
-      alt="Ericson Paulo YT Logo"
-      class="img-fluid rounded-circle mb-3"
-      style="max-width:140px;"
-    >
+    <img src="logo.png" alt="Ericson Paulo YT Logo" class="hero-logo mb-3">
 
-    <!-- TITLE -->
-    <h1 class="fw-bold">
-      Ericson Paulo <span class="text-info">YT</span>
+    <h1 class="hero-title">
+      Ericson Paulo <span>YT</span>
     </h1>
 
-    <p class="text-secondary mb-4">
+    <p class="hero-subtitle">
       GTA Roleplay • Gaming Content Creator
     </p>
 
-    <!-- BUTTONS -->
-    <div class="d-flex gap-3 justify-content-center flex-wrap">
-      <a
-        href="https://youtube.com/@ericsonpauloyt"
-        target="_blank"
-        class="btn btn-danger btn-lg rounded-pill px-4">
+    <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+      <a href="https://youtube.com/@ericsonpauloyt" target="_blank" class="btn neon-red">
         YouTube
       </a>
-      <a
-        href="#contact"
-        class="btn btn-outline-info btn-lg rounded-pill px-4">
+
+      <a href="#contact" class="btn neon-blue">
         Contact
       </a>
     </div>
@@ -57,78 +58,68 @@
 </header>
 
 <!-- ABOUT -->
-<section class="container py-5">
-  <h2 class="text-center text-info mb-4">About</h2>
-  <p class="text-center text-secondary mx-auto" style="max-width:800px">
-    Ericson Paulo YT is a GTA Roleplay creator known for cinematic gameplay,
-    immersive RP scenarios, and creative in-game stories.
+<section class="section">
+  <h2 class="section-title">About</h2>
+  <p class="section-text">
+    Ericson Paulo YT is a GTA Roleplay content creator known for cinematic
+    gameplay, immersive RP scenarios, and creative in-game storytelling.
   </p>
 </section>
 
-<!-- SOCIAL LINKS -->
-<section class="container py-5">
-  <h2 class="text-center text-info mb-4">Social Links</h2>
-  <div class="row justify-content-center g-3">
-    <div class="col-auto">
-      <a class="btn btn-outline-light" href="https://youtube.com/@ericsonpauloyt">YouTube</a>
-    </div>
-    <div class="col-auto">
-      <a class="btn btn-outline-light" href="https://www.facebook.com/share/1DoHvuvnUc/">Facebook</a>
-    </div>
-    <div class="col-auto">
-      <a class="btn btn-outline-light" href="https://www.tiktok.com/@ericson_paulo">TikTok</a>
-    </div>
-    <div class="col-auto">
-      <a class="btn btn-outline-light" href="https://discord.com/users/956172755521384488">Discord</a>
-    </div>
+<!-- SOCIAL -->
+<section class="section">
+  <h2 class="section-title">Social Links</h2>
+  <div class="d-flex justify-content-center gap-3 flex-wrap">
+    <a class="btn neon-outline" href="https://youtube.com/@ericsonpauloyt">YouTube</a>
+    <a class="btn neon-outline" href="https://www.facebook.com/share/1DoHvuvnUc/">Facebook</a>
+    <a class="btn neon-outline" href="https://www.tiktok.com/@ericson_paulo">TikTok</a>
+    <a class="btn neon-outline" href="https://discord.com/users/956172755521384488">Discord</a>
   </div>
 </section>
 
 <!-- GALLERY -->
-<section class="container py-5">
-  <h2 class="text-center text-info mb-4">Gallery</h2>
+<section class="section">
+  <h2 class="section-title">Gallery</h2>
 
   <div class="row g-4">
-    <div class="col-12 col-md-4">
-      <img src="gallery1.png" class="img-fluid rounded shadow" alt="GTA Cinematic">
+    <div class="col-md-4">
+      <img src="gallery1.png" class="img-fluid neon-card" alt="GTA RP Scene 1">
     </div>
-    <div class="col-12 col-md-4">
-      <img src="gallery2.png" class="img-fluid rounded shadow" alt="YouTube Banner">
+    <div class="col-md-4">
+      <img src="gallery2.png" class="img-fluid neon-card" alt="GTA RP Scene 2">
     </div>
-    <div class="col-12 col-md-4">
-      <img src="gallery3.png" class="img-fluid rounded shadow" alt="GTA Profile">
+    <div class="col-md-4">
+      <img src="gallery3.png" class="img-fluid neon-card" alt="GTA RP Scene 3">
     </div>
   </div>
 </section>
 
 <!-- VIDEO -->
-<section class="container py-5">
-  <h2 class="text-center text-info mb-4">Latest Video</h2>
-  <div class="ratio ratio-16x9 rounded overflow-hidden">
-    <iframe
-      src="https://www.youtube.com/embed/FGC2fIGL5bU"
-      allowfullscreen>
-    </iframe>
+<section class="section">
+  <h2 class="section-title">Latest Video</h2>
+  <div class="ratio ratio-16x9 neon-card">
+    <iframe src="https://www.youtube.com/embed/FGC2fIGL5bU" allowfullscreen></iframe>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="container py-5">
-  <h2 class="text-center text-info mb-4">Contact</h2>
+<section id="contact" class="section">
+  <h2 class="section-title">Contact</h2>
+
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <div class="card bg-black text-light p-4 rounded-4">
+      <div class="contact-card">
         <input class="form-control mb-3" placeholder="Your Name">
         <input class="form-control mb-3" placeholder="Email">
         <textarea class="form-control mb-3" rows="4" placeholder="Message"></textarea>
-        <button class="btn btn-info fw-bold">Send Message</button>
+        <button class="btn neon-blue w-100">Send Message</button>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="text-center py-4 text-secondary">
-  © 2026 Ericson Paulo YT • GTA Creator Website
+<footer class="footer">
+  © 2026 Ericson Paulo YT • GTA Roleplay Creator
 </footer>
 
 </body>
