@@ -171,3 +171,20 @@ body{
 .hero-fix{
   min-height: 85svh;
 }
+/* 🔥 FORCE FIX DARK HERO CONTENT */
+header,
+header * {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.hero-logo {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+header h1,
+header p,
+header a {
+  color: #ffffff !important;
+}
