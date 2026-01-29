@@ -162,3 +162,12 @@ body{
     height:150px;
   }
 }
+
+.hero-fix{
+  min-height: 90svh; /* mobile-safe viewport */
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.hero-fix{
+  min-height: 85svh;
+}
